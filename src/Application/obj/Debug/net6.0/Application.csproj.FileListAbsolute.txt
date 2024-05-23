@@ -1,0 +1,17 @@
+/Users/015756/Documents/Projects/orchestrator/src/Application/bin/Debug/net6.0/Application.deps.json
+/Users/015756/Documents/Projects/orchestrator/src/Application/bin/Debug/net6.0/Application.dll
+/Users/015756/Documents/Projects/orchestrator/src/Application/bin/Debug/net6.0/Application.pdb
+/Users/015756/Documents/Projects/orchestrator/src/Application/bin/Debug/net6.0/Domain.dll
+/Users/015756/Documents/Projects/orchestrator/src/Application/bin/Debug/net6.0/Infra.dll
+/Users/015756/Documents/Projects/orchestrator/src/Application/bin/Debug/net6.0/Domain.pdb
+/Users/015756/Documents/Projects/orchestrator/src/Application/bin/Debug/net6.0/Infra.pdb
+/Users/015756/Documents/Projects/orchestrator/src/Application/obj/Debug/net6.0/Application.csproj.AssemblyReference.cache
+/Users/015756/Documents/Projects/orchestrator/src/Application/obj/Debug/net6.0/Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/015756/Documents/Projects/orchestrator/src/Application/obj/Debug/net6.0/Application.AssemblyInfoInputs.cache
+/Users/015756/Documents/Projects/orchestrator/src/Application/obj/Debug/net6.0/Application.AssemblyInfo.cs
+/Users/015756/Documents/Projects/orchestrator/src/Application/obj/Debug/net6.0/Application.csproj.CoreCompileInputs.cache
+/Users/015756/Documents/Projects/orchestrator/src/Application/obj/Debug/net6.0/Applicat.44B5EDA2.Up2Date
+/Users/015756/Documents/Projects/orchestrator/src/Application/obj/Debug/net6.0/Application.dll
+/Users/015756/Documents/Projects/orchestrator/src/Application/obj/Debug/net6.0/refint/Application.dll
+/Users/015756/Documents/Projects/orchestrator/src/Application/obj/Debug/net6.0/Application.pdb
+/Users/015756/Documents/Projects/orchestrator/src/Application/obj/Debug/net6.0/ref/Application.dll

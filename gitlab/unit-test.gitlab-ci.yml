@@ -1,0 +1,43 @@
+unit-test:
+  extends: .build_rules
+  stage: build
+  allow_failure: false
+  
+  image:
+    name: mcr.microsoft.com/dotnet/sdk:6.0
+    entrypoint: [""]
+
+  before_script:
+    - 'echo | dotnet --version'
+    - dotnet tool install --version 5.1.4 -g dotnet-reportgenerator-globaltool
+    - export PATH="$PATH:/root/.dotnet/tools"
+  
+  script:
+    - |
+      dotnet test \
+      --collect:"XPlat Code Coverage" ${VSTEST_SETTINGS:+--settings $VSTEST_SETTINGS} \
+      --results-directory="./TestResults/cobertura" \
+      --test-adapter-path:. \
+      --logger:"junit;LogFilePath=../../TestResults/junit/{assembly}-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose"
+    
+    - |
+      reportgenerator \
+      -reports:./TestResults/cobertura/*/*.xml \
+      -targetdir:./reports-coverage \
+      -reportTypes:"Cobertura;TextSummary;Html"
+
+    - cat ./reports-coverage/Summary.txt
+    - echo 'End Summary'
+  
+  coverage: /Line coverage[\s\S].+%/
+  
+  artifacts:
+    paths:
+      - reports-coverage/
+      - TestResults/
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: ./TestResults/cobertura/*/*.cobertura.xml
+      junit:
+        - ./TestResults/junit/**/*test-result.xml

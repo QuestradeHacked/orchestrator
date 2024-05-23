@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "IvPF+1CMg3MKJ7GLnGPGbb8piTTzjDayV++k+Eag8Qg=",
+  "Source": "Orchestrator",
+  "BasePath": "_content/Orchestrator",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

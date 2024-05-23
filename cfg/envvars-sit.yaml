@@ -1,0 +1,5 @@
+environment_variables:
+
+  # CRM
+  Crm__Endpoint: "https://customer-master-data.sit.q3.questech.io/graphql"
+

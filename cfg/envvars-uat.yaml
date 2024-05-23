@@ -1,0 +1,6 @@
+environment_variables:
+
+  DD_LOG_LEVEL: info
+
+  # CRM
+  Crm__Endpoint: "https://customer-master-data.uat.q3.questech.io/graphql"

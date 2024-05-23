@@ -1,0 +1,22 @@
+environment_variables:
+
+  #Datadog config
+  DD_LOG_LEVEL: info
+
+  # Global log configuration
+  Serilog__MinimumLevel__Default: "Warning"
+
+  # PubSub
+  Orchestrator__CustomerProfileUpdateSubscriberConfiguration__SubscriptionId: system.customers.customer-profile.updated-1.0.fc-customer-orchestrator
+  Orchestrator__CustomerPiiUpdateSubscriberConfiguration__SubscriptionId: system.customers.customer-profile.updated-2.0.fc-customer-orchestrator
+  Orchestrator__SimIntelligencePublisherConfiguration__TopicId: system.financial-crime.internal-phone-number.scan-1.0
+  Orchestrator__IdentityIntelligencePublisherConfiguration__TopicId: system.financial-crime.internal-identity.scan-1.0
+  Orchestrator__EmailIntelligencePublisherConfiguration__TopicId: system.financial-crime.internal-email.scan-1.0
+
+  # CRM
+  Crm__Endpoint: "https://cmdp.svc.questrade.com/graphql"
+
+  #Feature Toggle
+  FeatureManagement__PublishSimIntelligenceEventsFeature: true
+  FeatureManagement__PublishIdentityIntelligenceEventsFeature: false
+  FeatureManagement__PublishEmailIntelligenceEventsFeature: true

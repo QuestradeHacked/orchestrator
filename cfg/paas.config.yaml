@@ -1,0 +1,61 @@
+service_name: fc-customer-orchestrator
+stack: dotnetcore
+owner: tmj
+
+notification_channels:
+  - customer-lifecycle-devops
+
+notification_emails:
+  - "questrade-scrumteam-tmj@questrade.com"
+
+release_managers:
+  users:
+    - dmohan@questrade.com
+    - igtanure@questrade.com
+    - jhasse@questrade.com
+    - lrogerio@questrade.com
+    - spotasio@questrade.com
+    - wantunes@questrade.com
+
+business_line:
+  name: enterprise
+  product: financial-crime
+  domain: financial-crime
+
+firestore:
+  enabled: true
+  env:
+    sit:
+      name: fc-orchestrator-fs-sit
+    uat:
+      name: fc-orchestrator-fs-uat
+    prod:
+      name: fc-orchestrator-fs-prod
+
+pubsubs_to_subscribe:
+  - name: system.customers.customer-profile.updated-1.0
+    deadLetter:
+      enabled: true
+      maxDeliveryAttempts: 5
+    retryPolicy:
+      minimumBackoff: 5s
+      maximumBackoff: 300s
+  - name: system.customers.customer-profile.updated-2.0
+    filter: attributes.isMasterProfile="false" AND (attributes.eventType="UPDATED" OR attributes.eventType="CREATED")
+    deadLetter:
+      enabled: true
+      maxDeliveryAttempts: 5
+    retryPolicy:
+      minimumBackoff: 5s
+      maximumBackoff: 300s
+
+pubsubs_to_publish:
+  - system.financial-crime.internal-phone-number.scan-1.0
+  - system.financial-crime.internal-identity.scan-1.0
+  - system.financial-crime.internal-email.scan-1.0
+
+rbac:
+  env:
+    sit:
+      groups:
+        - questrade-scrumteam-tmj@questrade.com

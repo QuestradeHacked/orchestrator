@@ -1,0 +1,123 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchestrator", "src\Orchestrator\Orchestrator.csproj", "{B128CF0E-8D8A-4168-A845-44D90E84EEDB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "src\Infra\Infra.csproj", "{9820DC9C-6338-4989-9993-7EAFF4ED1ED7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{62200783-426C-441F-AD31-70F6B8620EE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{75A1A2AC-720B-4F78-9398-C5CC7B5D4A36}"
+	ProjectSection(SolutionItems) = preProject
+		cfg\envvars-prod.yaml = cfg\envvars-prod.yaml
+		cfg\envvars-sit.yaml = cfg\envvars-sit.yaml
+		cfg\envvars-uat.yaml = cfg\envvars-uat.yaml
+		cfg\envvars.yaml = cfg\envvars.yaml
+		cfg\paas.config.yaml = cfg\paas.config.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{D5749C5F-F95D-47ED-AECE-4CDFD2958F0D}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F79EC3D7-B950-4F99-95E2-02D30A6B74B5}"
+	ProjectSection(SolutionItems) = preProject
+		productionreadiness.md = productionreadiness.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "editorconfig", "editorconfig", "{EF5B7AA4-FCD0-40EF-84C3-DDE168C84523}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "git", "git", "{08293F08-4FD1-42D9-A352-988546669AAC}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gitlab", "gitlab", "{62B86552-64F6-492A-B519-AE45F56F44D1}"
+	ProjectSection(SolutionItems) = preProject
+		.gitlab-ci.yml = .gitlab-ci.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{00FE65D8-FC29-4571-B4BA-B84EB08BB2EB}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.config = nuget.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3555E14B-D76A-4B55-A8F4-F5191A70E761}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4064E6A8-A3B9-4CC3-A171-250C9EDD386C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unit", "src\Unit\Unit.csproj", "{786032D5-2512-4E7F-B625-D9D3BBE417A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integration", "src\Integration\Integration.csproj", "{BEC0C885-B86C-43A7-AB18-4AF419CB22D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\Domain\Domain.csproj", "{03653776-5986-4616-AF44-A2A463183A99}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\Application\Application.csproj", "{EB56560C-38A5-4169-A831-147529E012EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev-environment", "dev-environment", "{4ADD5EDA-5310-4F2D-8D36-373A6147C3E6}"
+	ProjectSection(SolutionItems) = preProject
+		docker\dev-environment\.env = docker\dev-environment\.env
+		docker\dev-environment\docker-compose.yml = docker\dev-environment\docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B128CF0E-8D8A-4168-A845-44D90E84EEDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B128CF0E-8D8A-4168-A845-44D90E84EEDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B128CF0E-8D8A-4168-A845-44D90E84EEDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B128CF0E-8D8A-4168-A845-44D90E84EEDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9820DC9C-6338-4989-9993-7EAFF4ED1ED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9820DC9C-6338-4989-9993-7EAFF4ED1ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9820DC9C-6338-4989-9993-7EAFF4ED1ED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9820DC9C-6338-4989-9993-7EAFF4ED1ED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{786032D5-2512-4E7F-B625-D9D3BBE417A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{786032D5-2512-4E7F-B625-D9D3BBE417A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{786032D5-2512-4E7F-B625-D9D3BBE417A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{786032D5-2512-4E7F-B625-D9D3BBE417A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEC0C885-B86C-43A7-AB18-4AF419CB22D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEC0C885-B86C-43A7-AB18-4AF419CB22D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEC0C885-B86C-43A7-AB18-4AF419CB22D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEC0C885-B86C-43A7-AB18-4AF419CB22D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03653776-5986-4616-AF44-A2A463183A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03653776-5986-4616-AF44-A2A463183A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03653776-5986-4616-AF44-A2A463183A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03653776-5986-4616-AF44-A2A463183A99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB56560C-38A5-4169-A831-147529E012EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB56560C-38A5-4169-A831-147529E012EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB56560C-38A5-4169-A831-147529E012EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB56560C-38A5-4169-A831-147529E012EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B128CF0E-8D8A-4168-A845-44D90E84EEDB} = {3555E14B-D76A-4B55-A8F4-F5191A70E761}
+		{9820DC9C-6338-4989-9993-7EAFF4ED1ED7} = {3555E14B-D76A-4B55-A8F4-F5191A70E761}
+		{75A1A2AC-720B-4F78-9398-C5CC7B5D4A36} = {62200783-426C-441F-AD31-70F6B8620EE0}
+		{D5749C5F-F95D-47ED-AECE-4CDFD2958F0D} = {62200783-426C-441F-AD31-70F6B8620EE0}
+		{F79EC3D7-B950-4F99-95E2-02D30A6B74B5} = {62200783-426C-441F-AD31-70F6B8620EE0}
+		{EF5B7AA4-FCD0-40EF-84C3-DDE168C84523} = {62200783-426C-441F-AD31-70F6B8620EE0}
+		{08293F08-4FD1-42D9-A352-988546669AAC} = {62200783-426C-441F-AD31-70F6B8620EE0}
+		{62B86552-64F6-492A-B519-AE45F56F44D1} = {62200783-426C-441F-AD31-70F6B8620EE0}
+		{00FE65D8-FC29-4571-B4BA-B84EB08BB2EB} = {62200783-426C-441F-AD31-70F6B8620EE0}
+		{786032D5-2512-4E7F-B625-D9D3BBE417A7} = {4064E6A8-A3B9-4CC3-A171-250C9EDD386C}
+		{BEC0C885-B86C-43A7-AB18-4AF419CB22D9} = {4064E6A8-A3B9-4CC3-A171-250C9EDD386C}
+		{03653776-5986-4616-AF44-A2A463183A99} = {3555E14B-D76A-4B55-A8F4-F5191A70E761}
+		{EB56560C-38A5-4169-A831-147529E012EC} = {3555E14B-D76A-4B55-A8F4-F5191A70E761}
+		{4ADD5EDA-5310-4F2D-8D36-373A6147C3E6} = {D5749C5F-F95D-47ED-AECE-4CDFD2958F0D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE28012F-FB1D-4B04-8C0B-6E2065D12D36}
+	EndGlobalSection
+EndGlobal

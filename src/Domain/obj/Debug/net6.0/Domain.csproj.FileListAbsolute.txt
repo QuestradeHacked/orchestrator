@@ -1,0 +1,12 @@
+/Users/015756/Documents/Projects/orchestrator/src/Domain/bin/Debug/net6.0/Domain.deps.json
+/Users/015756/Documents/Projects/orchestrator/src/Domain/bin/Debug/net6.0/Domain.dll
+/Users/015756/Documents/Projects/orchestrator/src/Domain/bin/Debug/net6.0/Domain.pdb
+/Users/015756/Documents/Projects/orchestrator/src/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache
+/Users/015756/Documents/Projects/orchestrator/src/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/015756/Documents/Projects/orchestrator/src/Domain/obj/Debug/net6.0/Domain.AssemblyInfoInputs.cache
+/Users/015756/Documents/Projects/orchestrator/src/Domain/obj/Debug/net6.0/Domain.AssemblyInfo.cs
+/Users/015756/Documents/Projects/orchestrator/src/Domain/obj/Debug/net6.0/Domain.csproj.CoreCompileInputs.cache
+/Users/015756/Documents/Projects/orchestrator/src/Domain/obj/Debug/net6.0/Domain.dll
+/Users/015756/Documents/Projects/orchestrator/src/Domain/obj/Debug/net6.0/refint/Domain.dll
+/Users/015756/Documents/Projects/orchestrator/src/Domain/obj/Debug/net6.0/Domain.pdb
+/Users/015756/Documents/Projects/orchestrator/src/Domain/obj/Debug/net6.0/ref/Domain.dll

@@ -1,0 +1,72 @@
+environment_variables:
+  ASPNETCORE_ENVIRONMENT: $(ENV)
+  ASPNETCORE_URLS: "http://*:8080"
+
+  Serilog__MinimumLevel: "Information"
+
+  DataDog__StatsD__HostName: $(DD_AGENT_HOST)
+  DataDog__StatsD__Prefix: fincrime.customer-orchestrator
+  DataDog__StatsD__IsEnabled: true
+  DD_LOG_LEVEL: debug
+
+  # Global log configuration
+  Logging__IncludeScopes: "true"
+  Serilog__MinimumLevel__Default: "Information"
+
+  # Microsoft log level overrides
+  Serilog__MinimumLevel__Override__System: "Warning"
+  Serilog__MinimumLevel__Override__Microsoft: "Warning"
+  Serilog__MinimumLevel__Override__Microsoft.Hosting.Lifetime: "Warning"
+  Serilog__MinimumLevel__Override__Microsoft.AspNetCore: "Warning"
+  Serilog__MinimumLevel__Override__Microsoft.AspNetCore.Mvc: "Warning"
+  Serilog__MinimumLevel__Override__Microsoft.AspNetCore.Authentication: "Warning"
+  Serilog__MinimumLevel__Override__Microsoft.AspNetCore.Identity: "Warning"
+  Serilog__MinimumLevel__Override__Microsoft.AspNetCore.Session.SessionMiddleware: "Error"
+
+  # Serilog sinks (outputs) and configuration
+  Serilog__WriteTo__0__Name: "Console"
+  Serilog__WriteTo__0__Args__formatter: "Serilog.Formatting.Json.JsonFormatter"
+
+  # Serilog log enriching - to be reviewed with Production Support on what is useful and what can be dropped
+  Serilog__Enrich__0: "FromLogContext"
+  Serilog__Enrich__1: "WithMachineName"
+  Serilog__Enrich__2: "WithThreadId"
+  Serilog__Enrich__3: "WithExceptionDetails"
+
+  # Firestore configuration
+  FirestoreConfig__ProjectId: $(FIRESTORE_PROJECT)
+
+  # Orchestrator customer profile update subscriber
+  Orchestrator__CustomerProfileUpdateSubscriberConfiguration__Enable: false
+  Orchestrator__CustomerProfileUpdateSubscriberConfiguration__ProjectId: $(PROJECT)
+  Orchestrator__CustomerProfileUpdateSubscriberConfiguration__SubscriptionId: system.customers.customer-profile.updated-1.0.$(ENV).fc-customer-orchestrator
+
+  # Orchestrator customer pii update subscriber
+  Orchestrator__CustomerPiiUpdateSubscriberConfiguration__Enable: true
+  Orchestrator__CustomerPiiUpdateSubscriberConfiguration__ProjectId: $(PROJECT)
+  Orchestrator__CustomerPiiUpdateSubscriberConfiguration__SubscriptionId: system.customers.customer-profile.updated-2.0.$(ENV).fc-customer-orchestrator
+
+
+  # Orchestrator sim intelligence publisher
+  Orchestrator__SimIntelligencePublisherConfiguration__Enable: true
+  Orchestrator__SimIntelligencePublisherConfiguration__MaximumMessagePublishAttempts: 10
+  Orchestrator__SimIntelligencePublisherConfiguration__ProjectId: $(PROJECT)
+  Orchestrator__SimIntelligencePublisherConfiguration__TopicId: system.financial-crime.internal-phone-number.scan-1.0.$(ENV)
+
+  # Orchestrator Identity Intelligence publisher
+  Orchestrator__IdentityIntelligencePublisherConfiguration__Enable: true
+  Orchestrator__IdentityIntelligencePublisherConfiguration__MaximumMessagePublishAttempts: 10
+  Orchestrator__IdentityIntelligencePublisherConfiguration__ProjectId: $(PROJECT)
+  Orchestrator__IdentityIntelligencePublisherConfiguration__TopicId: system.financial-crime.internal-identity.scan-1.0.$(ENV)
+
+  # Orchestrator email intelligence publisher
+  Orchestrator__EmailIntelligencePublisherConfiguration__Enable: true
+  Orchestrator__EmailIntelligencePublisherConfiguration__MaximumMessagePublishAttempts: 10
+  Orchestrator__EmailIntelligencePublisherConfiguration__ProjectId: $(PROJECT)
+  Orchestrator__EmailIntelligencePublisherConfiguration__TopicId: system.financial-crime.internal-email.scan-1.0.$(ENV)
+
+  #Feature Toggle
+  FeatureManagement__PublishSimIntelligenceEventsFeature: true
+  FeatureManagement__PublishIdentityIntelligenceEventsFeature: true
+  FeatureManagement__PublishEmailIntelligenceEventsFeature: true
+  FeatureManagement__SubscribeToCustomerV2: true
